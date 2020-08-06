@@ -1,0 +1,882 @@
+/*
+Theme Name: asap systems
+Theme URI: http://underscores.me/
+Author: Fadi Nicolas Zahhar
+Author URI: https://www.wmvp.dev
+Description: A custom WordPress theme using Bootstrap.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: asapsystems
+*/
+
+/* COLOUR REFERENCES
+
+Green:		#79b044
+Salmon:		#dd5638
+Blue Gray:  #3e4249
+
+*/
+
+/* ==== GENERAL ==== */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  /* background: url("../img/tile.jpg") top left repeat; */
+}
+
+/* ==== GLOBAL ==== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-weight: bold;
+  color: #262626;
+  font-size: 32px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h1,
+h2 {
+  margin: 0 0 40px;
+}
+
+h3 {
+  margin: 20px 0;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+p.lead {
+  font-weight: normal;
+  font-size: 18px;
+  color: #666;
+}
+
+.seperator {
+  margin: 0 auto;
+  margin-top: 85px;
+  margin-bottom: 40px;
+  height: 2px;
+  max-width: 600px;
+}
+
+.colored {
+  background-color: orange;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+a:link,
+a:visited {
+  color: #dd5638;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #c9302c;
+}
+
+blockquote {
+  padding: 0;
+  border: none;
+  font-style: italic;
+  text-align: left;
+}
+
+blockquote cite {
+  display: block;
+  color: #777;
+  margin: 15px 0 0 0;
+}
+
+blockquote:before {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+.btn,
+a.btn {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  color: white;
+}
+
+.btn {
+  font-weight: bold;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-success {
+  background: #79b044;
+  border: none;
+}
+
+.btn-success:hover {
+  background: #6a9b3d;
+  border-color: #6a9b3d;
+}
+
+.btn-danger {
+  background-color: #dd5638;
+  border-color: #d95131;
+}
+
+.text-danger,
+li.text-danger a {
+  color: #dd5638;
+}
+
+a.text-danger:hover {
+  color: #e55939;
+}
+
+/* ==== FORMS ==== */
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 12px;
+}
+
+input[type="submit"],
+button[type="submit"] {
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.33;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: none;
+  border-radius: 6px;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  outline: none;
+  border: none;
+  background: #aaa;
+}
+
+form.search-form .form-group {
+  margin: 0;
+}
+
+form.search-form .input-group {
+  width: 100%;
+}
+
+form.search-form .input-group input[type="search"],
+form.search-form .input-group input[type="text"] {
+  width: 70%;
+}
+
+form.search-form .input-group input[type="submit"] {
+  width: 30%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  float: right;
+}
+
+form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+/* === RESOURCES === */
+
+.resource {
+  width: 31.33333333%;
+  float: left;
+  margin: 0 3% 40px 0;
+}
+
+.resource:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* === WIDGETS === */
+
+.widget {
+  padding: 20px;
+}
+
+.widget h4 {
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: solid 1px #ddd;
+}
+
+.widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.widget ul li {
+  margin: 0 0 5px;
+}
+
+.widget ul li:hover {
+  position: relative;
+  left: 1px;
+}
+
+/* === Custom code for ASAP === */
+.our-users-info {
+  max-width: 300px;
+}
+.our-users-info > h3,
+.functionalities {
+  color: #666666;
+}
+
+.user-num {
+  font-size: 120px;
+  color: #666666;
+  font-weight: bold;
+}
+
+.functionalities {
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+.our-users-info a {
+  font-size: 22px;
+  color: green;
+}
+
+hr.our-user-seperator {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 0;
+  border-top: 1px solid #666;
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+/* end custom code */
+
+/* carousel code */
+/**
+ * Padding is set relative to the width
+ * of the element, so here padding-top:60% is
+ * a percentage of the width. This allows us
+ * to set the height as a ratio of the width
+ *
+ */
+.carousel {
+  width: 100%;
+  position: relative;
+  padding-top: 45%;
+  overflow: hidden;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/**
+ * ==========================
+ * Animation styles
+ *
+ * Notes:
+ * 1. We use z-index to position active slides in-front
+ * of non-active slides
+ * 2. We set right:0 and left:0 on .slide to provide us with
+ * a default positioning on both sides of the slide. This allows
+ * us to trigger JS and CSS3 animations easily
+ *
+ */
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.slide.active,
+.slide.left,
+.slide.right {
+  z-index: 2;
+  opacity: 1;
+}
+
+/**
+ * ==========================
+ * JS animation styles
+ *
+ * We use jQuery.animate to control the sliding animations
+ * when CSS3 animations are not available. In order for
+ * the next slide to slide in from the right, we need
+ * to change the left:0 property of the slide to left:auto
+ *
+ */
+
+.js-reset-left {
+  left: auto;
+}
+
+/**
+ * ==========================
+ * CSS animation styles
+ *
+ * .slide.left and .slide.right set-up
+ * the to-be-animated slide so that it can slide
+ * into view. For example, a slide that is about
+ * to slide in from the right will:
+ * 1. Be positioned to the right of the viewport (right:-100%)
+ * 2. Slide in when the style is superseded with a more specific style (right:0%)
+ *
+ */
+.slide.left {
+  left: -100%;
+  right: 0;
+}
+
+.slide.right {
+  right: -100%;
+  left: auto;
+}
+
+.transition .slide.left {
+  left: 0%;
+}
+.transition .slide.right {
+  right: 0%;
+}
+
+/**
+ * The following classes slide the previously active
+ * slide out of view before positioning behind the
+ * currently active slide
+ *
+ */
+.transition .slide.shift-right {
+  right: 100%;
+  left: auto;
+}
+.transition .slide.shift-left {
+  left: 100%;
+  right: auto;
+}
+
+/**
+ * This sets the CSS properties that will animate. We set the
+ * transition-duration property dynamically via JS.
+ * We use the browser's default transition-timing-function
+ * for simplicity's sake
+ *
+ * It is important to note that we are using CodePen's inbuilt
+ * CSS3 property prefixer. For your own projects, you will need
+ * to prefix the transition and transform properties here to ensure
+ * reliable support across browsers
+ *
+ */
+.transition .slide {
+  -webkit-transition-property: right, left, margin;
+  transition-property: right, left, margin;
+}
+
+/**
+ * ==========================
+ * Indicators
+ *
+ */
+.indicators {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+  padding: 0;
+  text-align: center;
+}
+
+.indicators li {
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin: 5px;
+  background: #666;
+  list-style-type: none;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-out;
+  transition: background 0.3s ease-out;
+}
+
+.indicators li.active {
+  background: green;
+}
+
+.indicators li:hover {
+  background-color: #2b2b2b;
+}
+
+/**
+ * ==========================
+ * Arrows
+ *
+ */
+.arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  cursor: pointer;
+  -webkit-transition: border-color 0.3s ease-out;
+  transition: border-color 0.3s ease-out;
+}
+
+.arrow:hover {
+  border-color: #93278f;
+}
+
+.arrow-left {
+  left: 20px;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.arrow-right {
+  right: 20px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/**
+ * ==========================
+ * For demo purposes only
+ *
+ * Please note that the styles below are used
+ * for the purposes of this demo only. There is no need
+ * to use these in any of your own projects
+ *
+ */
+.slide {
+  background-size: cover;
+}
+
+/*.slide:nth-child(1) {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-1.jpg);
+}
+
+.slide:nth-child(2) {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-2.jpg);
+}
+
+.slide:nth-child(3) {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-3.jpg);
+}*/
+
+/* end carousel code */
+
+.section-header {
+  text-align: center;
+}
+
+section h2 {
+  margin: 20px 0 40px;
+}
+
+.tabs {
+  max-width: 100%;
+}
+@media only screen and (min-width: 700px) {
+  .tabs {
+    margin-left: 160px;
+    font-size: 32px;
+  }
+}
+.percent {
+  font-size: 120px;
+}
+.tabs > ul {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 1rem;
+}
+@media only screen and (min-width: 700px) {
+  .tabs > ul {
+    display: -webkit-box;
+    display: flex;
+  }
+}
+.tabs > ul li {
+  margin-right: 0.25rem;
+  text-align: center;
+}
+.tabs > ul li a {
+  display: block;
+  text-decoration: none;
+  color: #a1a1a1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  height: calc(100% - 2rem);
+  font-size: 32px;
+  font-weight: bold;
+}
+.tabs > ul li a::after {
+  content: "/";
+  margin: 10px;
+}
+.tabs > ul li a.active {
+  color: #262626;
+}
+.tabs > ul li a:hover:not(.active) {
+  color: #666767;
+}
+.tabs section {
+  background: #fff;
+  padding: 1.5rem 2.5rem;
+  display: none;
+}
+.tabs section.active {
+  display: block;
+}
+
+.accordion-heading {
+  display: block;
+  text-decoration: none;
+  padding: 1.5rem 2.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* industries we serve css */
+/* Style the tab */
+.tab {
+  float: right;
+  width: 30%;
+  height: auto;
+  margin-top: 120px;
+  font-size: 28px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 5px 5px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #a1a1a1;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  border-left: 5px solid #666767;
+  font-weight: bold;
+  color: #666767;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  border-left: 5px solid #262626;
+  font-weight: bold;
+  color: #262626;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  width: 70%;
+  height: auto;
+}
+
+.tab a {
+  font-size: 18px;
+  color: green;
+}
+/* end industries we server */
+
+header,
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #666;
+  display: block;
+}
+
+/* slider CSS */
+
+.slider {
+  max-width: 100%;
+  width: 100%;
+  height: 896px;
+  max-height: 896px;
+  position: relative;
+}
+.slide1,
+.slide2,
+.slide3,
+.slide4,
+.slide5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-left: 100px;
+  padding-top: 100px;
+}
+.slide1 {
+  background: url(./assets/img/image-banner-1.png) no-repeat center;
+  background-size: cover;
+  animation: fade 30s infinite;
+  -webkit-animation: fade 30s infinite;
+}
+.slide2 {
+  background: url(./assets/img/image-banner-2.png) no-repeat center;
+  background-size: cover;
+  animation: fade2 30s infinite;
+  -webkit-animation: fade2 30s infinite;
+}
+.slide3 {
+  background: url(./assets/img/image-banner-3.png) no-repeat center;
+  background-size: cover;
+  animation: fade3 30s infinite;
+  -webkit-animation: fade3 30s infinite;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  33.333% {
+    opacity: 0;
+  }
+  66.666% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+  }
+  33.333% {
+    opacity: 1;
+  }
+  66.666% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade3 {
+  0% {
+    opacity: 0;
+  }
+  33.333% {
+    opacity: 0;
+  }
+  66.666% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.slider-title {
+  font-size: 72px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #262626;
+}
+
+.slider-desc {
+  margin: 50px 0px 50px 0px;
+  font-size: 32px;
+  color: #262626;
+}
+a.square_btn,
+a.square_btn:active,
+a.square_btn:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.square_btn {
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: #ff3f00;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #fff;
+  /*background-image: -webkit-linear-gradient(45deg, #ffc107 0%, #ff8b5f 100%);
+  background-image: linear-gradient(45deg, #ffc107 0%, #ff8b5f 100%);*/
+  transition: 0.4s;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.square_btn:hover {
+  background-image: -webkit-linear-gradient(45deg, #ffc107 0%, #f76a35 100%);
+  background-image: linear-gradient(45deg, #ffc107 0%, #f76a35 100%);
+}
+
+/* end slider css */
+
+@media only screen and (min-width: 700px) {
+  .accordion-heading {
+    display: none;
+  }
+}
+.accordion-heading.active {
+  font-weight: bold;
+  background: #fff;
+  color: #2c2c2c;
+}
+.accordion-heading:hover:not(.active) {
+  color: #2c2c2c;
+}
+
+.line-container {
+  width: 90%;
+}
+/* ==== MEDIA QUERIES ==== */
+
+@media screen and (max-width: 991px) {
+  #instructor .container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+  }
+  .slider {
+    max-width: 100%;
+    width: 100%;
+    height: 420px;
+    max-height: 896px;
+    position: relative;
+  }
+
+  .slider-title {
+    font-size: 3rem;
+  }
+  .slider-desc {
+    font-size: 2rem;
+  }
+
+  .square_btn {
+    font-size: 1.8rem;
+  }
+
+  .slide1,
+  .slide2,
+  .slide3,
+  .slide4,
+  .slide5 {
+    padding-left: 5%;
+    padding-top: 1%;
+  }
+
+  .carousel {
+    height: 1400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 50%;
+  }
+
+  #optin p {
+    margin: 0 0 10px;
+  }
+
+  #featurette iframe {
+    height: 240px;
+  }
+
+  .resource {
+    width: 48%;
+    margin-right: 2%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  #instructor .num {
+    height: 100px;
+    width: 100px;
+    font-size: 22px;
+  }
+
+  #instructor .num span {
+    font-size: 16px;
+  }
+
+  .resource {
+    width: 100%;
+    margin-right: 0;
+  }
+}
